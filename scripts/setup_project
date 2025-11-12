@@ -1,0 +1,26 @@
+#!/bin/bash
+if ! command -v cz >/dev/null && [ "$DEVPOD" = "true" ]; then
+  echo "Setting up development environment..."
+  
+  git config --global push.autoSetupRemote true
+  git config --global --add safe.directory /workspaces/devops-study-app
+  
+  # Get the Python binary from mise
+  PYTHON_BIN=$(mise which python)
+  
+  # Install pipx using the mise Python
+  $PYTHON_BIN -m pip install --user pipx
+  
+  # Add pipx to PATH
+  export PATH="$HOME/.local/bin:$PATH"
+  
+  # Install commitizen
+  $HOME/.local/bin/pipx install commitizen
+  
+  # Get pre-commit binary from mise and use it
+  PRECOMMIT_BIN=$(mise which pre-commit)
+  $PRECOMMIT_BIN install
+  $PRECOMMIT_BIN install --hook-type commit-msg
+  
+  echo "Setup complete!"
+fi

@@ -1,0 +1,13 @@
+[tools]
+pre-commit = "latest"
+python = "3.13"
+uv = "latest"
+
+[settings]
+python_compile = false
+idiomatic_version_file_enable_tools = ["python"]
+experimental = true
+
+[env]
+APP_REPO = "study-app"
+GITOPS_REPO = "study-app-gitops"

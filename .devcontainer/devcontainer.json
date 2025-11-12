@@ -1,0 +1,17 @@
+{
+  "build": {
+    "context": "..",
+    "dockerfile": "Dockerfile"
+  },
+  "postCreateCommand": "bash scripts/setup && bash scripts/setup_project",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "forwardPorts": [
+    "22111",
+    "22112"
+  ],
+  "remoteEnv": {
+    "DEVPOD": "true"
+  }
+}
