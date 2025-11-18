@@ -15,8 +15,15 @@ dependencies = [
 study-tracker-frontend = "frontend.main:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/frontend"]
+packages = ["src"]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.1",
+    "pytest-cov>=7.0.0",
+    "responses>=0.25.8",
+]
