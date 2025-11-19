@@ -2,7 +2,7 @@ import json
 import requests
 import responses
 from conftest import captured_templates
-from main import app
+from frontend.main import app
 
 
 @responses.activate
