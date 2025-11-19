@@ -1,7 +1,7 @@
 import pytest
 from flask import template_rendered
 from contextlib import contextmanager
-from main import app
+from frontend.main import app
 
 
 @contextmanager
