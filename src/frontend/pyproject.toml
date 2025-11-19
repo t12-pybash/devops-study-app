@@ -7,7 +7,6 @@ authors = [{ name = "pybash", email = "pybashinf@gmail.com" }]
 requires-python = ">=3.13"
 dependencies = [
     "flask>=3.1.2",
-    "frontend>=0.0.3",
     "requests>=2.32.5",
 ]
 
