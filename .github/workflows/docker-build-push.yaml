@@ -12,7 +12,6 @@ jobs:
     name: Build and Push Backend
     runs-on: ubuntu-latest
     # Only run for backend tags
-    if: contains(github.ref, 'backend')
    
     permissions:
       contents: read
