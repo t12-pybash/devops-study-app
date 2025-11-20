@@ -96,8 +96,6 @@ async def read_stats():
         )
 
 
-
-
 def main():
     """Entry point for running the API server"""
     logger.info(f"Starting {APP_NAME} API")
