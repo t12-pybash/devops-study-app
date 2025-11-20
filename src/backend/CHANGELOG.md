@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.0](https://github.com/t12-pybash/devops-study-app/compare/backend-v0.1.0...backend-v0.2.0) (2025-11-20)
+
+
+### Features
+
+* **backend:** added container image building and pushing ([de92fc5](https://github.com/t12-pybash/devops-study-app/commit/de92fc50f2e0f1b5336c3e8a20ed8683bdc73de9))
+* **backend:** added container image building and pushing ([da926a6](https://github.com/t12-pybash/devops-study-app/commit/da926a60576ee3c44bdc1b83e850b3a092a590eb))
+
+
+### Bug Fixes
+
+* **backend-test:** uv run ruff format src tests to fix backend lint with ruff issue ([85c671b](https://github.com/t12-pybash/devops-study-app/commit/85c671b35e4a192f32ef301debe88d86136be30e))
+* **fix-backend-test:** repair malformed uv.lock file structure ([d7ee686](https://github.com/t12-pybash/devops-study-app/commit/d7ee686805ecc7090350b45a9b2d64c7cf2e755e))
+
 ## 0.1.0 (2025-11-19)
 
 
