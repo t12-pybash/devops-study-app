@@ -5,8 +5,7 @@
 
 ### Features
 
-* **backend:** added container image building and pushing ([de92fc5](https://github.com/t12-pybash/devops-study-app/commit/de92fc50f2e0f1b5336c3e8a20ed8683bdc73de9))
-* **backend:** added container image building and pushing ([da926a6](https://github.com/t12-pybash/devops-study-app/commit/da926a60576ee3c44bdc1b83e850b3a092a590eb))
+* **backend:** added container image building and pushing ([de92fc5](https://github.com/t12-pybash/devops-study-app/commit/de92fc50f2e0f1b5336c3e8a20ed8683bdc73de9), [da926a6](https://github.com/t12-pybash/devops-study-app/commit/da926a60576ee3c44bdc1b83e850b3a092a590eb))
 
 
 ### Bug Fixes
