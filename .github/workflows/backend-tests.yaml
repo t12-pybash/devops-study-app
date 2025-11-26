@@ -64,12 +64,17 @@ jobs:
           vuln-type: "os,library"
           severity: "CRITICAL,HIGH"
 
-    trigger_e2e:
-     name: Trigger E2E Tests
-     needs: test
-     if: success()
-     uses: ./.github/workflows/e2e-tests.yaml
+  trigger_e2e:
+    name: Trigger E2E Tests
+    needs: test
+    if: success()
+    uses: ./.github/workflows/e2e-tests.yaml
 
+  post_e2e:
+    name: Post E2E Actions
+    needs: trigger_e2e
+    runs-on: ubuntu-latest
+    steps:
       - name: Run tests with coverage
         run: |
           uv run pytest tests/ -v --cov=src/backend --cov-report=xml --cov-fail-under=80
@@ -107,7 +112,6 @@ jobs:
           image-ref: "backend-app:latest"
           format: "table"
           exit-code: "0"
-          # exit-code: '1' # Fail the workflow if vulnerabilities are found.
           ignore-unfixed: true
           vuln-type: "os,library"
           severity: "CRITICAL,HIGH"
