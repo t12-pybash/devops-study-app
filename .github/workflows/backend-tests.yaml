@@ -64,6 +64,12 @@ jobs:
           vuln-type: "os,library"
           severity: "CRITICAL,HIGH"
 
+   trigger_e2e:
+     name: Trigger E2E Tests
+     needs: test
+     if: success()
+     uses: ./.github/workflows/e2e-tests.yaml
+
       - name: Run tests with coverage
         run: |
           uv run pytest tests/ -v --cov=src/backend --cov-report=xml --cov-fail-under=80
