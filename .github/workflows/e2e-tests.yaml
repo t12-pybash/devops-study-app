@@ -22,6 +22,10 @@ jobs:
           version: "latest"
           skip-creation: true
 
+      - name: Verify k3d installation
+        run: |
+          k3d --version
+          k3d cluster list
       - name: Install kubectl
         uses: azure/setup-kubectl@v3
         with:
