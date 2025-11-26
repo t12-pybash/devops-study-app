@@ -78,6 +78,9 @@ jobs:
       run:
         working-directory: ./src/backend
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Install UV
         uses: astral-sh/setup-uv@v5
 
