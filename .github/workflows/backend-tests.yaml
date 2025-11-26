@@ -74,6 +74,9 @@ jobs:
     name: Post E2E Actions
     needs: trigger_e2e
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src/backend
     steps:
       - name: Install UV
         uses: astral-sh/setup-uv@v5
