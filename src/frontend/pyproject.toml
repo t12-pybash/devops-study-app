@@ -14,7 +14,7 @@ dependencies = [
 study-tracker-frontend = "frontend.main:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src"]
+packages = ["src/frontend"]
 
 [build-system]
 requires = ["hatchling"]
