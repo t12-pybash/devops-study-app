@@ -31,8 +31,10 @@ jobs:
         uses: astral-sh/setup-uv@v5
 
       - name: Set up Python
-        run: uv python install
+        run: echo "Python set up complete"
 
+      - name: Install Python dependencies
+        run: uv sync
       - name: Run E2E tests
         run: |
           uv run python e2e_test.py
