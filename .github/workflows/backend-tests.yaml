@@ -75,6 +75,12 @@ jobs:
     needs: trigger_e2e
     runs-on: ubuntu-latest
     steps:
+      - name: Install UV
+        uses: astral-sh/setup-uv@v5
+
+      - name: Set up Python
+        run: uv python install
+
       - name: Run tests with coverage
         run: |
           uv run pytest tests/ -v --cov=src/backend --cov-report=xml --cov-fail-under=80
