@@ -2,7 +2,7 @@ name: Build and Push Docker Images
 on:
   push:
     tags:
-      - "*-"
+      - "*-v*"
 env:
   REGISTRY: ghcr.io
   BACKEND_IMAGE_NAME: ${{ github.repository_owner }}/study-app-api
