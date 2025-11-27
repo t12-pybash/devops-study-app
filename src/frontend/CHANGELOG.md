@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.0](https://github.com/t12-pybash/devops-study-app/compare/frontend-v0.1.0...frontend-v0.2.0) (2025-11-27)
+
+
+### Features
+
+* **frontend:** add automated image building ([afab42e](https://github.com/t12-pybash/devops-study-app/commit/afab42e320eef0cb5da95842aeee6c1200266f79))
+* **frontend:** add automated image building ([1214f79](https://github.com/t12-pybash/devops-study-app/commit/1214f7938c630cf792443d8934441075c34a1da9))
+
 ## 0.1.0 (2025-11-20)
 
 
