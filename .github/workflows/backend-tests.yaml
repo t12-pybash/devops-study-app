@@ -64,11 +64,28 @@ jobs:
           vuln-type: "os,library"
           severity: "CRITICAL,HIGH"
 
-    trigger_e2e:
-     name: Trigger E2E Tests
-     needs: test
-     if: success()
-     uses: ./.github/workflows/e2e-tests.yaml
+  trigger_e2e:
+    name: Trigger E2E Tests
+    needs: test
+    if: success()
+    uses: ./.github/workflows/e2e-tests.yaml
+
+  post_e2e:
+    name: Post E2E Actions
+    needs: trigger_e2e
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src/backend
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install UV
+        uses: astral-sh/setup-uv@v5
+
+      - name: Set up Python
+        run: uv python install
 
       - name: Run tests with coverage
         run: |
@@ -107,7 +124,6 @@ jobs:
           image-ref: "backend-app:latest"
           format: "table"
           exit-code: "0"
-          # exit-code: '1' # Fail the workflow if vulnerabilities are found.
           ignore-unfixed: true
           vuln-type: "os,library"
           severity: "CRITICAL,HIGH"
