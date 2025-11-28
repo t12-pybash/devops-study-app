@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/t12-pybash/devops-study-app/compare/backend-v0.2.0...backend-v0.2.1) (2025-11-28)
+
+
+### Bug Fixes
+
+* **backend:** trigger CI ([fe26ecd](https://github.com/t12-pybash/devops-study-app/commit/fe26ecdb91c8d0b6526155615a356ee7fd4d88af))
+
 ## [0.2.0](https://github.com/t12-pybash/devops-study-app/compare/backend-v0.1.0...backend-v0.2.0) (2025-11-20)
 
 
