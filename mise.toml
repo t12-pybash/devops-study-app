@@ -17,7 +17,7 @@ experimental = true
 
 [env]
 APP_REPO = "study-app"
-GITOPS_REPO = "study-app-gitops"
+GITOPS_REPO = "devops-study-app-gitops"
 
 [tasks.k8s-setup-local]
 description = "Set up a basic Kubernetes cluster for development that builds the local images and applies them"

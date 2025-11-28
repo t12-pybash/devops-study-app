@@ -88,3 +88,12 @@ if [ ! -f "$KEY_DIR/study_app_gitops_deploy_key" ]; then
     exit 1
   fi
 fi
+
+# Run GitOps setup
+echo ""
+echo -e "${GREEN}Setting up GitOps with Flux...${NC}"
+bash "$SCRIPT_DIR/setup_gitops"
+
+echo ""
+echo -e "${GREEN}GitOps setup complete!${NC}"
+echo "Your cluster is now configured and Flux is watching your GitOps repository."
